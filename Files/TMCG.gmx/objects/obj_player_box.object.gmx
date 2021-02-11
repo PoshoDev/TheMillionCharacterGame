@@ -109,7 +109,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//MAIN VARIABLES
+            <string>///Initializes Variables
+
+//MAIN VARIABLES
 guy =           obj_player_char //This is pretty important. "guy" shortens the name for the sprite
 
 jump =          0       //Checks if the character is in the air (0 = On ground; 1 = On air; 2 = Double-jumping)
@@ -140,6 +142,59 @@ dj_spin =       0   //Works like the "size" variable. It makes the character do 
 //OTHERS
 if !instance_exists(obj_globalvariables)        //If the DevMode object doesn't exist, it makes one!
     instance_create(0,0,obj_globalvariables)
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Online actions
+
+PlayerName="";
+global.PlayerTotal++;
+
+// 3 keys: left, right and jump (could be more)
+for(var i=0;i&lt;3;i++){
+    keys[i] = false;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Online Actions
+global.PlayerTotal--;
 </string>
           </argument>
         </arguments>
@@ -219,7 +274,76 @@ if !instance_exists(obj_globalvariables)        //If the DevMode object doesn't 
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Alternative Key Binding Simulation
+
+//Left
+if keyboard_check_pressed(ord("A"))
+    keyboard_key_press(vk_left)
+if keyboard_check_released(ord("A"))
+    keyboard_key_release(vk_left)
+    
+//Right
+if keyboard_check_pressed(ord("D"))
+    keyboard_key_press(vk_right)
+if keyboard_check_released(ord("D"))
+    keyboard_key_release(vk_right)
+    
+//Z (Jump)
+if mouse_check_button_pressed(mb_left)
+    keyboard_key_press(ord("Z"))
+if mouse_check_button_released(mb_left)
+    keyboard_key_release(ord("Z"))
+    
+//X (Attack)
+if mouse_check_button_pressed(mb_right)
+    keyboard_key_press(ord("X"))
+if mouse_check_button_released(mb_right)
+    keyboard_key_release(ord("X"))
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Process the player (move+collision)
+var xx,yy,c1,c2;
+</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>605</id>

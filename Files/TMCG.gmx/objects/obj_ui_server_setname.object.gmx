@@ -30,7 +30,7 @@
 image_xscale =  4
 image_yscale =  4
 
-text =   "player"
+Text =   "player"
 write =  0
 </string>
           </argument>
@@ -54,7 +54,7 @@ write =  0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>text = keyboard_string
+            <string>Text = keyboard_string
 </string>
           </argument>
         </arguments>
@@ -90,7 +90,7 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_middle)
 draw_set_color(c_black);
 draw_set_font(fnt_text);
-draw_text(x+16,y+(8*4),text);
+draw_text(x+16,y+(8*4),Text);
 
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle)
