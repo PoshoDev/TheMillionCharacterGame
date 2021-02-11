@@ -123,17 +123,18 @@ run =           0       //Tells if character is running
 run_dir =       0       //Fixes turn-sprint bug
 
 //TEMPORAL MAIN VARIABLES
-atk =   "bullet"    //Attack Kind
-shp =   "orb"       //Attack Shape
+atk =   "swing"    //Attack Kind
+shp =   "sword"       //Attack Shape
 clr =   "red"       //Attack Color
 
 //STAT VARIABLES
 total_speed =   4       //Equation needs to be applied
 
 //COMBAT VARIABLES
-shoot_able =    1       //Tells if the character can attack
-shoot_anim =    0       //Makes a quick attack animation
-attack_dir =    "r"     //Checks the attack direction (r = right; l = left; u = up; d = down)
+shoot_able =        1       //Tells if the character can attack
+shoot_anim =        0       //Makes a quick attack animation
+attack_dir =        "r"     //Checks the attack direction (r = right; l = left; u = up; d = down)
+attack_dir_hold =   0       //Basically, this tells the player to not change direction until the attack is over (only certain attacks)
 
 //INITIAL DRAWING OF THE CHARACTER
 guy.image_xscale = -size    //Starts facing right
@@ -631,6 +632,9 @@ else
     guy.image_speed =   0
     
 //Checking for turning left or right
+if attack_dir_hold = 0
+{
+
 if keyboard_check(vk_left)
     if guy.image_xscale &lt; size
         if turn = 0
@@ -652,6 +656,8 @@ if turn = 1
     guy.image_xscale += 1
     if guy.image_xscale = size
         turn = 0
+    }
+    
     }
 //Animation for jumping
 

@@ -27,24 +27,39 @@
             <kind>1</kind>
             <string>///Initial Variables
 
-//Direction
+//Direction + beginning point of angle
 dir =                   0
+dir_lit =               "none"
+count =                 140
 
 if obj_player_box.attack_dir = "r"
-    dir = 0
+    {
+    dir =       0+90
+    dir_lit =   "r"
+    }
 if obj_player_box.attack_dir = "u"
-    dir = 90
+    {
+    dir =       90
+    dir_lit =   "u"
+    }
 if obj_player_box.attack_dir = "l"
-    dir = 180
+    {
+    dir =       180-70
+    dir_lit =   "l"
+    }
 if obj_player_box.attack_dir = "d"
-    dir = 270
+    {
+    dir =       270
+    dir_lit =   "d"
+    }
     
 //Resizing
 image_xscale =          4
 image_yscale =          4
-    
-//Alarm
-alarm[0] =              30
+image_angle =           dir
+
+//Prohibits the character to turn around until the attack is over
+obj_player_box.attack_dir_hold = 1
 </string>
           </argument>
         </arguments>
@@ -130,23 +145,33 @@ alarm[0] =              30
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
+    <event eventtype="1" enumb="0">
       <action>
         <libid>1</libid>
-        <id>203</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>obj_player_box.attack_dir_hold</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="3" enumb="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -163,17 +188,102 @@ alarm[0] =              30
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Movement
-//x += dir*10 //8
-
-speed = 10
-direction = dir
+            <string>///Swinging
+if dir_lit = "r"
+    {
+    image_angle -=  14
+    count -=         14
+    }
+if dir_lit = "l"
+    {
+    image_angle +=  14
+    count -=         14
+    }
+if dir_lit = "u"
+    {
+    image_angle -=  14
+    count -=         14
+    }
+if dir_lit = "d"
+    {
+    image_angle -=  14
+    count -=         14
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Sticking to the character
+if dir_lit = "r"
+    {
+    x = obj_player_box.x+32
+    y = obj_player_box.y
+    }
+if dir_lit = "l"
+    {
+    x = obj_player_box.x-32
+    y = obj_player_box.y
+    }
+if dir_lit = "u"
+    {
+    x = obj_player_box.x
+    y = obj_player_box.y-32
+    }
+if dir_lit = "d"
+    {
+    x = obj_player_box.x
+    y = obj_player_box.y+32
+    }
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_block">
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>count</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>1</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>203</id>
