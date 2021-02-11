@@ -10,17 +10,35 @@
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\sprite2</sprite>
     <sprite>sprites\spr_dust</sprite>
+    <sprite>sprites\sprite4</sprite>
+    <sprite>sprites\sprite5</sprite>
+    <sprite>sprites\sprite6</sprite>
+    <sprite>sprites\sprite7</sprite>
+    <sprite>sprites\spr_ruins_block</sprite>
+    <sprite>sprites\sprite14</sprite>
+    <sprite>sprites\sprite9</sprite>
+    <sprite>sprites\sprite10</sprite>
+    <sprite>sprites\spr_decor_drop</sprite>
+    <sprite>sprites\spr_decor_torch</sprite>
+    <sprite>sprites\sprite13</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_player_box</object>
     <object>objects\obj_player_char</object>
+    <object>objects\obj_player_cam</object>
     <object>objects\obj_block</object>
     <object>objects\obj_globalvariables</object>
     <object>objects\obj_part_dust</object>
+    <object>objects\obj_decor_grass</object>
+    <object>objects\obj_decor_drop</object>
+    <object>objects\obj_torch</object>
+    <object>objects\obj_light</object>
+    <object>objects\obj_block_big</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room1</room>
     <room>rooms\room0</room>
   </rooms>
   <help>

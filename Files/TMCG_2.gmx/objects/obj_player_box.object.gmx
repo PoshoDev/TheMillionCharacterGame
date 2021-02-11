@@ -342,15 +342,30 @@ if turn = 1
         turn = 0
     }
 //Animation for jumping
+
 if jump = 1
-    if dir = -1
-        if guy.image_angle &gt; -18
-            guy.image_angle -= 2
+    if vspeed &lt; 0
+        if dir = -1
+            if guy.image_angle &gt; -18
+                guy.image_angle -= 2
 if jump = 1
+    if vspeed &lt; 0
+        if dir = 1
+            if guy.image_angle &lt; 18
+                guy.image_angle += 2
+            
+//Animation for falling
+if vspeed &gt; 0
     if dir = 1
-        if guy.image_angle &lt; 18
+        if guy.image_angle &gt; -8
+            guy.image_angle -= 2
+               
+if vspeed &gt; 0
+    if dir = -1
+        if guy.image_angle &lt; 8
             guy.image_angle += 2
     
+
 //Animation for double-jump spin (if active)
 if dj_spin = -1
     {
@@ -563,6 +578,78 @@ else
       </action>
       <action>
         <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>jump</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>guy.image_angle</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>dj_spin</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>201</id>
         <kind>0</kind>
         <userelative>-1</userelative>
@@ -586,30 +673,6 @@ else
           <argument>
             <kind>0</kind>
             <string>size*8</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>jump</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
           </argument>
         </arguments>
       </action>
