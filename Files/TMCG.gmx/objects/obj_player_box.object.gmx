@@ -121,6 +121,7 @@ turn =          0       //Makes the character turn depending the direction asked
 size =          4       //Size for the character, generally used for x_scale and y_scale
 run =           0       //Tells if character is running
 run_dir =       0       //Fixes turn-sprint bug
+run_anim =      0       //Animation for sprinting
 
 //TEMPORAL MAIN VARIABLES
 atk =   "swing"    //Attack Kind
@@ -178,6 +179,118 @@ if !instance_exists(obj_globalvariables)        //If the DevMode object doesn't 
 //for(var i=0;i&lt;3;i++){
   //  keys[i] = false;
 //}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>IMPORT SHIT</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>obj_player_char</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Pre-Import Stuff
+//Basically preloads some variables in case something is missing to replace them with default ones
+
+c_at =  "bullet"
+c_cl =  "red"
+
+c_no = irandom_range(0,516) //**VERSION CHANGE**
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>obj_player_char</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>scr_getCharacter</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Reads imported Character strings and makes its own copy from obj_player_char
+c_nm = obj_player_char.c_nm
+c_at = obj_player_char.c_at
+c_sh = obj_player_char.c_sh
+c_cl = obj_player_char.c_cl
 </string>
           </argument>
         </arguments>
@@ -419,28 +532,6 @@ if mouse_check_button_released(mb_right)
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Process the player (move+collision)
-var xx,yy,c1,c2;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>605</id>
         <kind>0</kind>
         <userelative>0</userelative>
@@ -577,8 +668,9 @@ if keyboard_check_pressed(ord('X'))
         instance_create(x,y,obj_atk_attack)
         }
     if jump = 0 //Triggers animation
-        if shoot_anim = 0   
-            shoot_anim = 1
+        if shoot_anim = 0
+            if run != 2   
+                shoot_anim = 1
     }
     
 //Actual animation
@@ -624,6 +716,13 @@ if keyboard_check_released(vk_left)
     move = 0
 if keyboard_check_released(vk_right)
     move = 0
+    
+//Sets iddle images for when not moving
+    if move = 0
+        if jump &gt; 0
+            guy.image_index = 1
+        else
+            guy.image_index = 0
 
 //Sets animation speeds
 if move = 1
@@ -672,7 +771,7 @@ if jump = 1
             if guy.image_angle &lt; 18
                 guy.image_angle += 2
             
-//Animation for falling
+//Animation for falling !!!
 if vspeed &gt; 0
     if dir = 1
         if guy.image_angle &gt; -8
@@ -725,7 +824,7 @@ if dj_spin = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Running Action
+            <string>///Sprinting
 
 //Makes the character run faster if a left/right is pressed twice
 if jump = 0
@@ -778,9 +877,43 @@ if keyboard_check_released(vk_right)
 }
         
 if run = 2  //The rest
+    {
+    ////////// NEW SPRINTING MECHANIC ///////////
+    if jump &lt; 1
+    {
+        if run_anim = 0
+            run_anim = 1
+        if run_anim = 1 //Pushes front
+            guy.image_angle -= 10*dir
+        if guy.image_angle = -50*dir
+            run_anim = 2
+        
+        if run_anim = 2 //Pushes back
+            {
+            guy.image_angle += 10*dir
+            if guy.image_angle = 0*dir
+                {
+                guy.image_angle = 0
+                run_anim = 0
+                }
+            }
+        }
+        
+    ////////// NEW SPRINTING MECHANIC ///////////
     total_speed =   8
+    }
 else
+    {
+    ////////// NEW SPRINTING MECHANIC ///////////
+    if jump &lt; 1
+        if guy.image_angle != 0 //Pushes back
+            {
+            guy.image_angle += 10*dir
+            run_anim = 0
+            }
+    ////////// NEW SPRINTING MECHANIC ///////////
     total_speed =   4
+    }
 </string>
           </argument>
         </arguments>
@@ -923,6 +1056,34 @@ else
           </argument>
           <argument>
             <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>global.devmode</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
             <string>0</string>
           </argument>
         </arguments>
@@ -1450,6 +1611,34 @@ else
       </action>
       <action>
         <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>global.devmode</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>201</id>
         <kind>0</kind>
         <userelative>-1</userelative>
@@ -1492,7 +1681,8 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>guy.image_angle = 0
+            <string>run_anim = 0
+guy.image_angle = 0
 shoot_anim = 0
 </string>
           </argument>

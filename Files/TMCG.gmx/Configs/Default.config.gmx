@@ -58,6 +58,7 @@
     <option_android_interpolate>-1</option_android_interpolate>
     <option_android_licensing_enable>0</option_android_licensing_enable>
     <option_android_licensing_key></option_android_licensing_key>
+    <option_android_lint>true</option_android_lint>
     <option_android_major_version>1</option_android_major_version>
     <option_android_min_sdk_version>9</option_android_min_sdk_version>
     <option_android_minor_version>0</option_android_minor_version>
@@ -89,10 +90,11 @@
     <option_android_push_id></option_android_push_id>
     <option_android_scale>-1</option_android_scale>
     <option_android_set_device_id></option_android_set_device_id>
+    <option_android_sleep_margin>4</option_android_sleep_margin>
     <option_android_splash_png>Configs\Default\android\splash.png</option_android_splash_png>
     <option_android_splash_time>0</option_android_splash_time>
     <option_android_support_lib_version>23.1.1</option_android_support_lib_version>
-    <option_android_target_sdk_version>23</option_android_target_sdk_version>
+    <option_android_target_sdk_version>16</option_android_target_sdk_version>
     <option_android_texture_page>1024</option_android_texture_page>
     <option_android_use_test_ads>0</option_android_use_test_ads>
     <option_androidfire_GPU_device>0</option_androidfire_GPU_device>
@@ -139,6 +141,7 @@
     <option_androidfire_large_icon_png>Configs\Default\amazonfire\icons\large_icon.png</option_androidfire_large_icon_png>
     <option_androidfire_licensing_enable>false</option_androidfire_licensing_enable>
     <option_androidfire_licensing_key></option_androidfire_licensing_key>
+    <option_androidfire_lint>true</option_androidfire_lint>
     <option_androidfire_major_version>1</option_androidfire_major_version>
     <option_androidfire_min_sdk_version>9</option_androidfire_min_sdk_version>
     <option_androidfire_minor_version>0</option_androidfire_minor_version>
@@ -207,6 +210,7 @@
     <option_androidtv_large_icon_png>Configs\Default\androidtv\icons\large_icon.png</option_androidtv_large_icon_png>
     <option_androidtv_licensing_enable>false</option_androidtv_licensing_enable>
     <option_androidtv_licensing_key></option_androidtv_licensing_key>
+    <option_androidtv_lint>true</option_androidtv_lint>
     <option_androidtv_major_version>1</option_androidtv_major_version>
     <option_androidtv_minor_version>0</option_androidtv_minor_version>
     <option_androidtv_moga>false</option_androidtv_moga>
@@ -227,7 +231,7 @@
     <option_audioGroupCount>1</option_audioGroupCount>
     <option_author></option_author>
     <option_backimage>nil</option_backimage>
-    <option_borderless>false</option_borderless>
+    <option_borderless>False</option_borderless>
     <option_changed>false</option_changed>
     <option_changeresolution>false</option_changeresolution>
     <option_closeesc>true</option_closeesc>
@@ -238,6 +242,7 @@
     <option_facebook_app_display_name></option_facebook_app_display_name>
     <option_facebook_appid></option_facebook_appid>
     <option_facebook_enable>0</option_facebook_enable>
+    <option_fast_collision_compatibility>false</option_fast_collision_compatibility>
     <option_freeze>false</option_freeze>
     <option_frequency>0</option_frequency>
     <option_frontimage>nil</option_frontimage>
@@ -254,7 +259,7 @@
     <option_html5_advertising_type>Supersonic Ads</option_html5_advertising_type>
     <option_html5_allow_fullscreen>True</option_html5_allow_fullscreen>
     <option_html5_alwaysreload>False</option_html5_alwaysreload>
-    <option_html5_browser_title>Created with GameMaker: Studio</option_html5_browser_title>
+    <option_html5_browser_title>Created with GameMaker:Studio</option_html5_browser_title>
     <option_html5_centergame>False</option_html5_centergame>
     <option_html5_facebook_app_display_name></option_html5_facebook_app_display_name>
     <option_html5_facebook_appid></option_html5_facebook_appid>
@@ -270,7 +275,7 @@
     <option_html5_interpolate>-1</option_html5_interpolate>
     <option_html5_jsprepend></option_html5_jsprepend>
     <option_html5_loadingbar>-1</option_html5_loadingbar>
-    <option_html5_localrunalert>true</option_html5_localrunalert>
+    <option_html5_localrunalert>True</option_html5_localrunalert>
     <option_html5_outputdebugtoconsole>False</option_html5_outputdebugtoconsole>
     <option_html5_outputname>index.html</option_html5_outputname>
     <option_html5_scale>-1</option_html5_scale>
@@ -278,7 +283,7 @@
     <option_html5_splash_png>Configs\Default\html5\splash.png</option_html5_splash_png>
     <option_html5_texture_page>2048</option_html5_texture_page>
     <option_html5_use_test_ads>0</option_html5_use_test_ads>
-    <option_html5_usebuiltinparticles>true</option_html5_usebuiltinparticles>
+    <option_html5_usebuiltinparticles>True</option_html5_usebuiltinparticles>
     <option_html5_usesplash>False</option_html5_usesplash>
     <option_icon>nil</option_icon>
     <option_in_app_purchase_enable>0</option_in_app_purchase_enable>
@@ -303,7 +308,7 @@
     <option_ios_google_analytics_enable>0</option_ios_google_analytics_enable>
     <option_ios_google_play_id></option_ios_google_play_id>
     <option_ios_google_tracking_id></option_ios_google_tracking_id>
-    <option_ios_half_ipad1_textures>false</option_ios_half_ipad1_textures>
+    <option_ios_half_ipad1_textures>0</option_ios_half_ipad1_textures>
     <option_ios_icon_114>Configs\Default\ios\icons\icon114.png</option_ios_icon_114>
     <option_ios_icon_120>Configs\Default\ios\icons\icon120.png</option_ios_icon_120>
     <option_ios_icon_144>Configs\Default\ios\icons\icon144.png</option_ios_icon_144>
@@ -342,6 +347,7 @@
     <option_ios_set_device_id></option_ios_set_device_id>
     <option_ios_splash_png>Configs\Default\ios\splash.png</option_ios_splash_png>
     <option_ios_splash_time>0</option_ios_splash_time>
+    <option_ios_team_id></option_ios_team_id>
     <option_ios_texture_page>1024</option_ios_texture_page>
     <option_ios_use_test_ads>0</option_ios_use_test_ads>
     <option_lastchanged></option_lastchanged>
@@ -375,6 +381,7 @@
     <option_mac_copyright_info>(c)2012 CompanyName Ltd...</option_mac_copyright_info>
     <option_mac_create_app_store>-1</option_mac_create_app_store>
     <option_mac_display_name>newtutorial_platformer</option_mac_display_name>
+    <option_mac_enable_retina>false</option_mac_enable_retina>
     <option_mac_enable_steam>0</option_mac_enable_steam>
     <option_mac_fullscreen>0</option_mac_fullscreen>
     <option_mac_icon_png>Configs\Default\mac\icon512.png</option_mac_icon_png>
@@ -391,6 +398,7 @@
     <option_mac_splash_png>Configs\Default\mac\splash.png</option_mac_splash_png>
     <option_mac_steam_app_id>0</option_mac_steam_app_id>
     <option_mac_sync>0</option_mac_sync>
+    <option_mac_team_id></option_mac_team_id>
     <option_mac_texture_page>2048</option_mac_texture_page>
     <option_noborder>false</option_noborder>
     <option_nobuttons>false</option_nobuttons>
@@ -409,6 +417,7 @@
     <option_ps3_revision_version>0</option_ps3_revision_version>
     <option_ps3_scale>0</option_ps3_scale>
     <option_ps3_texture_page>2048</option_ps3_texture_page>
+    <option_ps3_version>01.00</option_ps3_version>
     <option_ps4_build_version>0</option_ps4_build_version>
     <option_ps4_displaycursor>0</option_ps4_displaycursor>
     <option_ps4_interpolate>-1</option_ps4_interpolate>
@@ -441,7 +450,7 @@
     <option_savekey>true</option_savekey>
     <option_scale>-1</option_scale>
     <option_scaleprogress>true</option_scaleprogress>
-    <option_sci_UseSCI>false</option_sci_UseSCI>
+    <option_sci_UseSCI>0</option_sci_UseSCI>
     <option_sci_serverLocation></option_sci_serverLocation>
     <option_screenkey>True</option_screenkey>
     <option_screenshotkey>true</option_screenshotkey>
@@ -450,7 +459,7 @@
     <option_showprogress>1</option_showprogress>
     <option_sizeable>False</option_sizeable>
     <option_stayontop>false</option_stayontop>
-    <option_sync_vertex>0</option_sync_vertex>
+    <option_sync_vertex>1</option_sync_vertex>
     <option_textureGroup0_border>2</option_textureGroup0_border>
     <option_textureGroup0_nocropping>0</option_textureGroup0_nocropping>
     <option_textureGroup0_parent>&lt;none&gt;</option_textureGroup0_parent>
@@ -477,6 +486,20 @@
     <option_tizen_splash_png>Configs\Default\tizen\splash.png</option_tizen_splash_png>
     <option_tizen_texture_page>1024</option_tizen_texture_page>
     <option_tizen_usesplash>False</option_tizen_usesplash>
+    <option_tvos_app_id></option_tvos_app_id>
+    <option_tvos_build_version>0</option_tvos_build_version>
+    <option_tvos_certificate></option_tvos_certificate>
+    <option_tvos_display_name>TMCG</option_tvos_display_name>
+    <option_tvos_icon_1280>Configs\Default\tvos\icons\icon1280.png</option_tvos_icon_1280>
+    <option_tvos_icon_400>Configs\Default\tvos\icons\icon400.png</option_tvos_icon_400>
+    <option_tvos_interpolate>true</option_tvos_interpolate>
+    <option_tvos_major_version>1</option_tvos_major_version>
+    <option_tvos_minor_version>0</option_tvos_minor_version>
+    <option_tvos_scale>-1</option_tvos_scale>
+    <option_tvos_splash_png>Configs\Default\tvos\splash.png</option_tvos_splash_png>
+    <option_tvos_splash_time>0</option_tvos_splash_time>
+    <option_tvos_texture_page>2048</option_tvos_texture_page>
+    <option_use_fast_collision>false</option_use_fast_collision>
     <option_use_new_audio>True</option_use_new_audio>
     <option_variableerrors>False</option_variableerrors>
     <option_version>100</option_version>
@@ -506,7 +529,7 @@
     <option_win8_logo_background_colour>#000000</option_win8_logo_background_colour>
     <option_win8_logo_foreground_text>light</option_win8_logo_foreground_text>
     <option_win8_major_version>1</option_win8_major_version>
-    <option_win8_microphone_capable>false</option_win8_microphone_capable>
+    <option_win8_microphone_capable>0</option_win8_microphone_capable>
     <option_win8_minor_version>0</option_win8_minor_version>
     <option_win8_native_certificate_location>Win8NativeRunner_TemporaryKey.pfx</option_win8_native_certificate_location>
     <option_win8_native_cpu>x86</option_win8_native_cpu>
@@ -515,6 +538,7 @@
     <option_win8_portrait_allowed>-1</option_win8_portrait_allowed>
     <option_win8_portrait_flipped_allowed>-1</option_win8_portrait_flipped_allowed>
     <option_win8_publisher_display_name>YourPublisherName</option_win8_publisher_display_name>
+    <option_win8_publisher_name>CN=YoyoGames</option_win8_publisher_name>
     <option_win8_revision_version>0</option_win8_revision_version>
     <option_win8_scaling_stretch>false</option_win8_scaling_stretch>
     <option_win8_search_capable>0</option_win8_search_capable>
@@ -524,9 +548,11 @@
     <option_win8_store_logo>Configs\Default\Windows8\logos\logo50.png</option_win8_store_logo>
     <option_win8_texture_page>1024</option_win8_texture_page>
     <option_win8_wide_logo>Configs\Default\Windows8\logos\logo310.png</option_win8_wide_logo>
+    <option_winUAP_allowfullscreen>false</option_winUAP_allowfullscreen>
     <option_winUAP_build_version>0</option_winUAP_build_version>
     <option_winUAP_certificate_location>WinUWPRunner_TemporaryKey.pfx</option_winUAP_certificate_location>
     <option_winUAP_display_name>TMCG</option_winUAP_display_name>
+    <option_winUAP_fullscreen>false</option_winUAP_fullscreen>
     <option_winUAP_internet_capable>false</option_winUAP_internet_capable>
     <option_winUAP_interpolate>true</option_winUAP_interpolate>
     <option_winUAP_landscape_allowed>true</option_winUAP_landscape_allowed>
@@ -544,6 +570,7 @@
     <option_winUAP_portrait_allowed>true</option_winUAP_portrait_allowed>
     <option_winUAP_portrait_flipped_allowed>true</option_winUAP_portrait_flipped_allowed>
     <option_winUAP_publisher_display_name>YourPublisherName</option_winUAP_publisher_display_name>
+    <option_winUAP_publisher_name>CN=Sandbox</option_winUAP_publisher_name>
     <option_winUAP_revision_version>0</option_winUAP_revision_version>
     <option_winUAP_scaling_stretch>false</option_winUAP_scaling_stretch>
     <option_winUAP_search_capable>false</option_winUAP_search_capable>
@@ -577,7 +604,7 @@
     <option_windows_splash_screen>Configs\Default\windows\splash.png</option_windows_splash_screen>
     <option_windows_steam_app_id>0</option_windows_steam_app_id>
     <option_windows_texture_page>2048</option_windows_texture_page>
-    <option_windows_use_splash>true</option_windows_use_splash>
+    <option_windows_use_splash>0</option_windows_use_splash>
     <option_windows_vertex_buffer_method2>1</option_windows_vertex_buffer_method2>
     <option_winphone_480_splash_image>Configs\Default\WinPhone\SplashScreenImage480.jpg</option_winphone_480_splash_image>
     <option_winphone_720_splash_image>Configs\Default\WinPhone\SplashScreenImage720.jpg</option_winphone_720_splash_image>
@@ -630,7 +657,7 @@
     <option_winphone_portrait_allowed>-1</option_winphone_portrait_allowed>
     <option_winphone_publisher>YourPublisherName</option_winphone_publisher>
     <option_winphone_publisher_id>f47823f0-220d-459a-bf68-b6ea984b24a8</option_winphone_publisher_id>
-    <option_winphone_record_audio_capability>true</option_winphone_record_audio_capability>
+    <option_winphone_record_audio_capability>-1</option_winphone_record_audio_capability>
     <option_winphone_revision_version>0</option_winphone_revision_version>
     <option_winphone_scale>-1</option_winphone_scale>
     <option_winphone_supports_720p>-1</option_winphone_supports_720p>
@@ -646,7 +673,7 @@
     <option_xbone_events_manifest_index>-1</option_xbone_events_manifest_index>
     <option_xbone_foreground_text>light</option_xbone_foreground_text>
     <option_xbone_interpolation>-1</option_xbone_interpolation>
-    <option_xbone_languages>"&lt;!-- Add languages you support here --&gt;","&lt;!-- os_get_language will only return languages listed --&gt;","&lt;!-- ""en"" is supported by default --&gt;","&lt;!-- See ""NLS APIs and Localization"" white paper --&gt;","&lt;!-- from developer.xboxlive.com for info --&gt;"</option_xbone_languages>
+    <option_xbone_languages>"&lt;!-- Insert the languages your title supports here --&gt;","&lt;!-- os_get_language will only return languages that are listed --&gt;","&lt;!-- ""en"" is supported by default --&gt;","&lt;!-- Resource Language=""en-us""/ --&gt;"</option_xbone_languages>
     <option_xbone_major_version>0</option_xbone_major_version>
     <option_xbone_minor_version>0</option_xbone_minor_version>
     <option_xbone_network_manifest_file></option_xbone_network_manifest_file>
@@ -654,9 +681,9 @@
     <option_xbone_publisher></option_xbone_publisher>
     <option_xbone_publisher_display_name></option_xbone_publisher_display_name>
     <option_xbone_ratings>"&lt;mx:Ratings Category=""game""&gt;","&lt;!-- Insert your title ratings here --&gt;","&lt;!-- See ""Title Ratings for Xbox One"" white paper --&gt;","&lt;!-- from developer.xboxlive.com for details --&gt;","&lt;/mx:Ratings&gt;"</option_xbone_ratings>
-    <option_xbone_require_audio_recording>false</option_xbone_require_audio_recording>
-    <option_xbone_require_game_chat>false</option_xbone_require_game_chat>
-    <option_xbone_require_xbox_live>true</option_xbone_require_xbox_live>
+    <option_xbone_require_audio_recording>False</option_xbone_require_audio_recording>
+    <option_xbone_require_game_chat>False</option_xbone_require_game_chat>
+    <option_xbone_require_xbox_live>True</option_xbone_require_xbox_live>
     <option_xbone_revision_version>0</option_xbone_revision_version>
     <option_xbone_scale>-1</option_xbone_scale>
     <option_xbone_service_config_id></option_xbone_service_config_id>

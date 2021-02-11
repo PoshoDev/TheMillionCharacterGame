@@ -26,6 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>global.devmode =    1   //Allows functions that are not avaliable for normal players
+
+//global.devmode does...
+    //Disables water drops
+    //Disables dust
 </string>
           </argument>
         </arguments>
