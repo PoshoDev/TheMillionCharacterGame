@@ -61,13 +61,18 @@ move =          0       //Checks if it's moving on any direction
 dir =           1       //Checks wether the character is pointing left or right (-1 = Left; 0 = Nothing; 1 = Right)
 turn =          0       //Makes the character turn depending the direction asked, when animation is complete it goes back to 0 (-1 = Left; 0 = Nothing; 1 = Right)
 size =          4       //Size for the character, generally used for x_scale and y_scale
+run =           0       //Tells if character is running
+run_dir =       0       //Fixes turn-sprint bug
+
+//STAT VARIABLES
+total_speed =   4       //Equation needs to be applied
 
 //COMBAT VARIABLES
 shoot_able =    1       //Tells if the character can attack
 shoot_anim =    0       //Makes a quick attack animation
 
 //INITIAL DRAWING OF THE CHARACTER
-guy.image_xscale = size
+guy.image_xscale = -size    //Starts facing right
 guy.image_yscale = size
 image_xscale = size
 image_yscale = size
@@ -76,6 +81,80 @@ image_yscale = size
 doublejump =    1   //Double-Jump item
 dj_spin =       0   //Works like the "size" variable. It makes the character do a roll in mid-air if it double-jumps(-1 = Left; 0 = Nothing; 1 = Right)
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>RUNS IF DONE SUCCESFULLY</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>-1</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>run</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>2</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>run</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -241,13 +320,13 @@ else
     
 //Checking for turning left or right
 if keyboard_check(vk_left)
-    if guy.image_xscale &gt; -size
-        if turn = 0
-            turn = -1
-if keyboard_check(vk_right)
     if guy.image_xscale &lt; size
         if turn = 0
             turn = 1
+if keyboard_check(vk_right)
+    if guy.image_xscale &gt; -size
+        if turn = 0
+            turn = -1
             
 //Animation for turning left or right
 if turn = -1
@@ -314,6 +393,100 @@ if shoot_anim = 2   //Pushes back
         shoot_anim = 0
         }
     }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>RUNNING ACTION</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Makes the character run faster if a left/right is pressed twice
+if jump = 0
+{
+
+if keyboard_check_pressed(vk_left)  //LEFT
+    if alarm[0] &gt; 0
+        if run = 1
+            if run_dir = -1
+                {
+                run = 2
+                instance_create(x,y+size*8, obj_part_dust)
+                }
+        
+if keyboard_check_released(vk_left)
+    if run = 0
+        {
+        alarm[0] = 10   //NEEDS MORE BALANCING!!!!!
+        run = 1
+        run_dir = dir
+        }
+    else
+        {
+        run = 0
+        alarm[0] = 0
+        }
+        
+if keyboard_check_pressed(vk_right)  //RIGHT
+    if alarm[0] &gt; 0
+        if run = 1
+            if run_dir = 1
+                {
+                run = 2
+                instance_create(x,y+size*8, obj_part_dust)
+                }
+        
+if keyboard_check_released(vk_right)
+    if run = 0
+        {
+        alarm[0] = 10   //NEEDS MORE BALANCING!!!!!
+        run = 1
+        run_dir = dir
+        }
+    else
+        {
+        run = 0
+        alarm[0] = 0
+        }
+        
+}
+        
+if run = 2  //The rest
+    total_speed =   8
+else
+    total_speed =   4
 </string>
           </argument>
         </arguments>
@@ -390,6 +563,34 @@ if shoot_anim = 2   //Pushes back
       </action>
       <action>
         <libid>1</libid>
+        <id>201</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_create_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>-1</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>10</kind>
+            <object>obj_part_dust</object>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>size*8</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>611</id>
         <kind>6</kind>
         <userelative>-1</userelative>
@@ -450,7 +651,7 @@ if shoot_anim = 2   //Pushes back
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>4</string>
+            <string>total_speed</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -478,7 +679,7 @@ if shoot_anim = 2   //Pushes back
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>4</string>
+            <string>total_speed</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -553,7 +754,7 @@ dir = 1
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>-4</string>
+            <string>-total_speed</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -581,7 +782,7 @@ dir = 1
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>-4</string>
+            <string>-total_speed</string>
           </argument>
           <argument>
             <kind>0</kind>
