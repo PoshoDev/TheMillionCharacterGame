@@ -21,9 +21,18 @@
     <sprite>sprites\spr_decor_drop</sprite>
     <sprite>sprites\spr_decor_torch</sprite>
     <sprite>sprites\sprite13</sprite>
+    <sprite>sprites\sprite15</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <scripts name="Chunks">
+      <script>scripts\scr_chunk_list.gml</script>
+      <scripts name="Commands">
+        <script>scripts\ch1.gml</script>
+      </scripts>
+    </scripts>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_player_box</object>
     <object>objects\obj_player_char</object>
@@ -38,6 +47,7 @@
     <object>objects\obj_block_big</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room2</room>
     <room>rooms\room1</room>
     <room>rooms\room0</room>
   </rooms>
