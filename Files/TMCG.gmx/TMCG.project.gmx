@@ -79,6 +79,7 @@
       <object>objects\obj_player_cam</object>
     </objects>
     <objects name="Scenario">
+      <object>objects\obj_enemy</object>
       <object>objects\obj_block</object>
       <object>objects\obj_block_big</object>
       <objects name="Decorative">
@@ -107,9 +108,10 @@
         <object>objects\oServer</object>
       </objects>
     </objects>
-    <object>objects\obj_enemy</object>
-    <object>objects\obj_atk_attack</object>
-    <object>objects\obj_atk_bullet</object>
+    <objects name="Attacks">
+      <object>objects\obj_atk_attack</object>
+      <object>objects\obj_atk_bullet</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <rooms name="Tests">
@@ -131,7 +133,7 @@
     <constant name="JUMP_KEY">2</constant>
     <constant name="KEY_CMD">0</constant>
     <constant name="NAME_CMD">1</constant>
-    <constant name="GM_build_date">41906.0087834606</constant>
+    <constant name="GM_build_date">41906.0301703935</constant>
     <constant name="GM_version">'1.0.0.11'</constant>
   </constants>
   <help>
