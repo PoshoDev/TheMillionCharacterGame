@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="9" name="datafiles">
+  <datafiles number="12" name="datafiles">
     <datafile>
       <name>absol.png</name>
       <exists>-1</exists>
@@ -39,7 +39,7 @@
       <filename></filename>
     </datafile>
     <datafile>
-      <name>beheeyem_puke.png</name>
+      <name>beheeyempng</name>
       <exists>-1</exists>
       <size>316</size>
       <exportAction>2</exportAction>
@@ -72,6 +72,57 @@
       </ConfigOptions>
       <filename></filename>
     </datafile>
+    <datafile>
+      <name>beheeyem.png</name>
+      <exists>-1</exists>
+      <size>428</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename></filename>
+    </datafile>
+    <datafile>
+      <name>businessbanana.png</name>
+      <exists>-1</exists>
+      <size>428</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename></filename>
+    </datafile>
+    <datafile>
+      <name>thegreentie.png</name>
+      <exists>-1</exists>
+      <size>302</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename></filename>
+    </datafile>
   </datafiles>
   <NewExtensions/>
   <sounds name="sound"/>
@@ -83,12 +134,16 @@
     <sprite>sprites\spr_start</sprite>
     <sprite>sprites\spr_photo</sprite>
     <sprite>sprites\spr_creator</sprite>
+    <sprite>sprites\sprite7</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_list.gml</script>
     <script>scripts\script1.gml</script>
+    <script>scripts\replace_of_error_shit.gml</script>
+    <script>scripts\scr_getsprites.gml</script>
+    <script>scripts\scr_GetVariables.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\Font</font>

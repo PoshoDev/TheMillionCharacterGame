@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1024</width>
   <height>768</height>
-  <vsnap>64</vsnap>
-  <hsnap>64</hsnap>
+  <vsnap>16</vsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>30</speed>
   <persistent>0</persistent>
@@ -56,9 +56,7 @@
     <instance objName="photo" x="960" y="704" name="inst_BD0108BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="photo" x="960" y="512" name="inst_CDE2E508" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="photo" x="928" y="512" name="inst_4E7CA697" locked="0" code="" scaleX="0" scaleY="1" colour="4294967295" rotation="2"/>
-    <instance objName="obj_start" x="0" y="64" name="inst_1EC5BB8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_avoid" x="1024" y="0" name="inst_FB07A548" locked="0" code="" scaleX="1" scaleY="1" colour="4294901760" rotation="0"/>
-    <instance objName="obj_char" x="256" y="0" name="inst_F1B3FB0F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

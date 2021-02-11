@@ -287,8 +287,6 @@ if numba = 5 {draw_text(120,10,"doesn't want to play anymore with ")}
 if numba = 6 {draw_text(120,10,"got his ass wooped by ")} 
 if numba = 7 {draw_text(120,10,"got his tears drank by ")}
 if numba = 8 {draw_text(120,10,"pisses his pants by the sight of ")}  
-
-
 </string>
           </argument>
         </arguments>

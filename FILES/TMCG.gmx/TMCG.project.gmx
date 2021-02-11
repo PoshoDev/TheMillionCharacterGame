@@ -3,6 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="599" name="datafiles"/>
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\Jump</sound>
@@ -32,12 +33,40 @@
           <sprite>sprites\_spr_explosion_blue</sprite>
         </sprites>
         <sprites name="Attacks">
-          <sprite>sprites\_spr_bullet</sprite>
-          <sprite>sprites\spr_attackset</sprite>
-          <sprite>sprites\spr_mine</sprite>
-          <sprite>sprites\_spr_bullet_red</sprite>
-          <sprite>sprites\_spr_bullet_blue</sprite>
+          <sprite>sprites\spr_atk_orb</sprite>
+          <sprite>sprites\spr_atk_sword</sprite>
+          <sprite>sprites\spr_atk_stick</sprite>
+          <sprite>sprites\spr_atk_whip</sprite>
+          <sprite>sprites\spr_atk_spark</sprite>
+          <sprite>sprites\spr_atk_beam</sprite>
+          <sprite>sprites\spr_atk_hammer</sprite>
+          <sprite>sprites\spr_atk_knife</sprite>
+          <sprite>sprites\spr_atk_spike</sprite>
+          <sprite>sprites\spr_atk_hand</sprite>
+          <sprite>sprites\spr_atk_fist</sprite>
+          <sprite>sprites\spr_atk_kick</sprite>
+          <sprite>sprites\spr_atk_dust</sprite>
+          <sprite>sprites\spr_atk_wave</sprite>
+          <sprite>sprites\spr_atk_fire</sprite>
+          <sprite>sprites\spr_atk_mine</sprite>
+          <sprite>sprites\spr_atk_bomb</sprite>
+          <sprite>sprites\spr_atk_grenade</sprite>
+          <sprite>sprites\spr_atk_powder</sprite>
+          <sprite>sprites\spr_atk_bite</sprite>
+          <sprite>sprites\spr_atk_shuriken</sprite>
+          <sprite>sprites\spr_atk_arrow</sprite>
+          <sprites name="unused">
+            <sprite>sprites\_spr_bullet</sprite>
+            <sprite>sprites\_spr_bullet_red</sprite>
+            <sprite>sprites\_spr_bullet_blue</sprite>
+            <sprite>sprites\spr_attacksetp</sprite>
+          </sprites>
         </sprites>
+        <sprites name="Tombs">
+          <sprite>sprites\spr_tomb_1</sprite>
+          <sprite>sprites\spr_tomb_2</sprite>
+        </sprites>
+        <sprite>sprites\spr_bit</sprite>
       </sprites>
       <sprites name="Scenery">
         <sprite>sprites\_spr_block</sprite>
@@ -51,12 +80,21 @@
         <sprite>sprites\_spr_menu_2</sprite>
         <sprite>sprites\_spr_menu_3</sprite>
         <sprite>sprites\_spr_menu_4</sprite>
+        <sprite>sprites\spr_stageselect</sprite>
       </sprites>
-      <sprite>sprites\_spr_template</sprite>
-      <sprite>sprites\sprite204</sprite>
-      <sprite>sprites\sprite203</sprite>
-      <sprite>sprites\sprite202</sprite>
-      <sprite>sprites\_spr_forum</sprite>
+      <sprites name="Representations">
+        <sprite>sprites\spr_rep_players</sprite>
+        <sprite>sprites\spr_rep_player2</sprite>
+        <sprite>sprites\spr_rep_enemy</sprite>
+        <sprite>sprites\spr_rep_other</sprite>
+      </sprites>
+      <sprites name="Outside Game">
+        <sprite>sprites\Logos</sprite>
+        <sprite>sprites\_spr_forum</sprite>
+      </sprites>
+      <sprites name="Unused">
+        <sprite>sprites\_spr_template</sprite>
+      </sprites>
     </sprites>
     <sprites name="Characters">
       <sprites name="001-100">
@@ -245,12 +283,6 @@
         <sprite>sprites\fluttershy</sprite>
       </sprites>
     </sprites>
-    <sprite>sprites\_spr_tomb</sprite>
-    <sprite>sprites\spr_bit</sprite>
-    <sprite>sprites\spr_stageselect</sprite>
-    <sprite>sprites\sprite209</sprite>
-    <sprite>sprites\imgu</sprite>
-    <sprite>sprites\Logos</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -267,6 +299,7 @@
     <script>scripts\Joystick_S.gml</script>
     <script>scripts\Joystick_P1.gml</script>
     <script>scripts\Joystick_P2.gml</script>
+    <script>scripts\scr_getem.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\Text</font>
@@ -277,8 +310,6 @@
     <object>objects\Player1</object>
     <object>objects\Player2</object>
     <object>objects\Enemy</object>
-    <object>objects\obj_titlescreen_things</object>
-    <object>objects\object2</object>
     <object>objects\Bouncer</object>
     <object>objects\ArrowS</object>
     <object>objects\Arrow1</object>
@@ -315,7 +346,6 @@
     <object>objects\obj_bit</object>
     <object>objects\obj_stageselect</object>
     <object>objects\obj_loading</object>
-    <object>objects\object42</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rom_menu</room>
