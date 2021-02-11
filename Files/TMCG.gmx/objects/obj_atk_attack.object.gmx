@@ -28,6 +28,9 @@
             <string>///Defines Type
 if obj_player_box.atk = "bullet"
     instance_create(x,y,obj_atk_bullet)
+    
+if obj_player_box.atk = "swing"
+    instance_create(x,y,obj_atk_swing)
 </string>
           </argument>
         </arguments>

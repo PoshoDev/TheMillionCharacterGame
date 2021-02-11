@@ -18,9 +18,8 @@
       <sprite>sprites\spr_decor_torch</sprite>
     </sprites>
     <sprites name="Attacks">
-      <sprites name="Bullets">
-        <sprite>sprites\spr_atk_bullet_orb</sprite>
-      </sprites>
+      <sprite>sprites\spr_atk_orb</sprite>
+      <sprite>sprites\spr_atk_sword</sprite>
     </sprites>
     <sprites name="Particles">
       <sprite>sprites\spr_part_light</sprite>
@@ -68,6 +67,10 @@
       <script>scripts\SendName.gml</script>
       <script>scripts\SendKeepAlive.gml</script>
     </scripts>
+    <scripts name="Attacks">
+      <script>scripts\scr_atk_shape.gml</script>
+      <script>scripts\scr_atk_color.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_text</font>
@@ -111,6 +114,7 @@
     <objects name="Attacks">
       <object>objects\obj_atk_attack</object>
       <object>objects\obj_atk_bullet</object>
+      <object>objects\obj_atk_swing</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -133,7 +137,7 @@
     <constant name="JUMP_KEY">2</constant>
     <constant name="KEY_CMD">0</constant>
     <constant name="NAME_CMD">1</constant>
-    <constant name="GM_build_date">41906.0301703935</constant>
+    <constant name="GM_build_date">41907.7159189699</constant>
     <constant name="GM_version">'1.0.0.11'</constant>
   </constants>
   <help>
