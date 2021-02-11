@@ -16,7 +16,7 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1016</w>
+    <w>937</w>
     <h>749</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
@@ -52,7 +52,7 @@
   </views>
   <instances>
     <instance objName="obj_player_box" x="352" y="160" name="inst_3FE6134F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_globalvariables" x="256" y="64" name="inst_04C25D02" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_block" x="64" y="160" name="inst_4AE7CE82" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_block" x="160" y="192" name="inst_D554627F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_block" x="192" y="192" name="inst_345A3E50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_block" x="224" y="192" name="inst_55FB56DE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -81,7 +81,6 @@
     <instance objName="obj_block" x="64" y="128" name="inst_44469BDC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_block" x="96" y="128" name="inst_D4DA3A83" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_block" x="96" y="160" name="inst_5E103824" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_block" x="64" y="160" name="inst_4AE7CE82" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
