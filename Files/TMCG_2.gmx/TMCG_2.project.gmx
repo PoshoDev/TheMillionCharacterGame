@@ -29,7 +29,9 @@
     <scripts name="Chunks">
       <script>scripts\scr_chunk_list.gml</script>
       <scripts name="Commands">
+        <script>scripts\ch0.gml</script>
         <script>scripts\ch1.gml</script>
+        <script>scripts\scr_chunk_next.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -45,10 +47,13 @@
     <object>objects\obj_torch</object>
     <object>objects\obj_light</object>
     <object>objects\obj_block_big</object>
+    <object>objects\obj_chunk</object>
+    <object>objects\obj_chunk_writer</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room2</room>
     <room>rooms\room1</room>
+    <room>rooms\room3</room>
     <room>rooms\room0</room>
   </rooms>
   <help>
