@@ -10216,8 +10216,8 @@
     <object>objects\lepetitbox</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room2</room>
-    <room>rooms\room1</room>
+    <room>rooms\x1024</room>
+    <room>rooms\x640</room>
     <room>rooms\room0</room>
   </rooms>
   <help>

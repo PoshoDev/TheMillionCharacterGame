@@ -20,6 +20,7 @@
     <sprites name="InGame">
       <sprites name="Player">
         <sprites name="Arrows">
+          <sprite>sprites\spr_arrow</sprite>
           <sprite>sprites\_spr_arrow_red</sprite>
           <sprite>sprites\_spr_arrow_blue</sprite>
         </sprites>
@@ -71,8 +72,21 @@
       </sprites>
       <sprites name="Scenery">
         <sprite>sprites\_spr_block</sprite>
-        <sprite>sprites\_background_shade</sprite>
-        <sprite>sprites\_stage_platform</sprite>
+        <sprites name="Fireworks">
+          <sprite>sprites\spr_firework_small</sprite>
+          <sprite>sprites\spr_firework_big</sprite>
+        </sprites>
+        <sprites name="Stages">
+          <sprites name="Origin">
+            <sprite>sprites\spr_stage_origin_platform</sprite>
+            <sprite>sprites\spr_stage_origin_background</sprite>
+            <sprite>sprites\spr_stage_origin_both</sprite>
+          </sprites>
+          <sprites name="Cage">
+            <sprite>sprites\_stage_platform</sprite>
+            <sprite>sprites\_background_shade</sprite>
+          </sprites>
+        </sprites>
       </sprites>
     </sprites>
     <sprites name="Others">
@@ -89,6 +103,9 @@
         <sprite>sprites\spr_rep_enemy</sprite>
         <sprite>sprites\spr_rep_other</sprite>
         <sprite>sprites\spr_rep_block</sprite>
+        <sprite>sprites\spr_rep_enemy_jump</sprite>
+        <sprite>sprites\spr_rep_enemy_jump_left</sprite>
+        <sprite>sprites\spr_rep_enemy_jump_right</sprite>
       </sprites>
       <sprites name="Outside Game">
         <sprite>sprites\Logos</sprite>
@@ -285,6 +302,8 @@
         <sprite>sprites\fluttershy</sprite>
       </sprites>
     </sprites>
+    <sprite>sprites\spr_bit_vanish</sprite>
+    <sprite>sprites\spr_spawn_enemy</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -316,9 +335,11 @@
   </fonts>
   <objects name="objects">
     <object>objects\PlayerS</object>
+    <object>objects\PlayerS_follow</object>
     <object>objects\Player1</object>
     <object>objects\Player2</object>
     <object>objects\Enemy</object>
+    <object>objects\enemy_origin</object>
     <objects name="Attacks">
       <object>objects\obj_atk_kind</object>
       <object>objects\obj_atk_shoot</object>
@@ -332,10 +353,10 @@
     <object>objects\Scenario1</object>
     <object>objects\Explosion</object>
     <object>objects\object17</object>
-    <object>objects\BluXplosion</object>
     <object>objects\RedXplosion</object>
     <object>objects\Spawner_1</object>
     <object>objects\Spawner_2</object>
+    <object>objects\BluXplosion</object>
     <object>objects\Spawner_3</object>
     <object>objects\Spawner_4</object>
     <object>objects\object23</object>
@@ -361,17 +382,36 @@
     <object>objects\obj_bit</object>
     <object>objects\obj_stageselect</object>
     <object>objects\obj_loading</object>
+    <object>objects\obj_bit_vanish</object>
+    <object>objects\obj_spawner_enemy</object>
+    <objects name="Fireworks">
+      <object>objects\obj_firework_spawner</object>
+      <object>objects\obj_firework_small</object>
+      <object>objects\obj_firework_big</object>
+      <object>objects\obj_firework_disco_small</object>
+      <object>objects\obj_firework_disco_big</object>
+    </objects>
+    <object>objects\obj_stage</object>
+    <object>objects\obj_enemyjump_left</object>
+    <object>objects\obj_enemyjump_right</object>
+    <object>objects\par_jumper</object>
+    <object>objects\obj_stage_origin</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rom_menu</room>
-    <room>rooms\rom_test</room>
-    <room>rooms\rom_stageselect</room>
     <room>rooms\rom_origin</room>
+    <room>rooms\rom_test_origin</room>
+    <room>rooms\rom_test</room>
+    <room>rooms\rom_menu</room>
+    <room>rooms\rom_stageselect</room>
     <room>rooms\rom_cage</room>
     <room>rooms\Credits</room>
     <room>rooms\rom_origin_2p</room>
     <room>rooms\room7</room>
   </rooms>
+  <constants number="2">
+    <constant name="GM_build_date">41887.9991959954</constant>
+    <constant name="GM_version">'0.3.0.0'</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

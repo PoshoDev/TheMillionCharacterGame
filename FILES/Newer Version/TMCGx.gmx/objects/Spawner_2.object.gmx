@@ -49,7 +49,7 @@
         <arguments>
           <argument>
             <kind>10</kind>
-            <object>Enemy</object>
+            <object>enemy_origin</object>
           </argument>
           <argument>
             <kind>0</kind>

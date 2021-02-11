@@ -71,7 +71,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>640</string>
+            <string>1024</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -137,7 +137,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>16</string>
+            <string>64</string>
           </argument>
         </arguments>
       </action>
@@ -357,11 +357,33 @@ image_speed = 0.3
           </argument>
           <argument>
             <kind>0</kind>
-            <string>16</string>
+            <string>64</string>
           </argument>
           <argument>
             <kind>0</kind>
             <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_xscale = 2
+image_yscale = 2
+</string>
           </argument>
         </arguments>
       </action>
