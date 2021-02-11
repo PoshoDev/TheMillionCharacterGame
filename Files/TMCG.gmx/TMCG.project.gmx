@@ -36,6 +36,7 @@
     </sprites>
     <sprites name="Temporal">
       <sprite>sprites\sprite2</sprite>
+      <sprite>sprites\sprite20</sprite>
       <sprite>sprites\sprite6</sprite>
     </sprites>
     <sprites name="Old">
@@ -107,6 +108,8 @@
       </objects>
     </objects>
     <object>objects\obj_enemy</object>
+    <object>objects\obj_atk_attack</object>
+    <object>objects\obj_atk_bullet</object>
   </objects>
   <rooms name="rooms">
     <rooms name="Tests">
@@ -114,7 +117,9 @@
       <room>rooms\rom_test_chunk_write</room>
       <room>rooms\rom_test_chunk_load</room>
       <room>rooms\rom_test_small</room>
-      <room>rooms\rom_mplay_servers</room>
+      <rooms name="Multiplayer">
+        <room>rooms\rom_mplay_servers</room>
+      </rooms>
     </rooms>
   </rooms>
   <constants number="10">
@@ -126,7 +131,7 @@
     <constant name="JUMP_KEY">2</constant>
     <constant name="KEY_CMD">0</constant>
     <constant name="NAME_CMD">1</constant>
-    <constant name="GM_build_date">41898.1917396875</constant>
+    <constant name="GM_build_date">41898.2141091088</constant>
     <constant name="GM_version">'1.0.0.11'</constant>
   </constants>
   <help>
